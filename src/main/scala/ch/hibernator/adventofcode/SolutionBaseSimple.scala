@@ -14,7 +14,9 @@ trait SolutionBaseSimple:
     Using(Source.fromFile(inputFileAddress))(_.getLines().toSeq).get
 
   def main(args: Array[String]): Unit =
+    println("Solving test input")
     val testResults = solve(testInput)
+    println("Solving real input")
     val realResults = solve(input)
     println(s"Test result part 1: ${testResults._1}")
     println(s"Real result part 1: ${realResults._1}")
