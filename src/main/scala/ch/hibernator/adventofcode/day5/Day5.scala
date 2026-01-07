@@ -5,7 +5,7 @@ import ch.hibernator.adventofcode.SolutionBaseSimple
 object Day5 extends SolutionBaseSimple:
   override def day: Int = 5
 
-  override def solve(input: Seq[String]): (Long, Long) = {
+  override def solve(input: Seq[String]): (Long, Long) =
     val ranges = input
       .takeWhile(!_.isBlank)
       .map: line =>
@@ -28,7 +28,6 @@ object Day5 extends SolutionBaseSimple:
       acc + (range.end - range.start + 1)
 
     (numFreshIngredients, numPotentialFreshIngredients)
-  }
 
   case class SimpleRange(start: Long, end: Long):
     def isInRange(ingredient: Long): Boolean =
