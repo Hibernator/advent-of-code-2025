@@ -5,7 +5,7 @@ import ch.hibernator.adventofcode.SolutionBaseSimple
 object Day6 extends SolutionBaseSimple:
   override def day: Int = 6
 
-  override def solve(input: Seq[String]): (Long, Long) = {
+  override def solve(input: Seq[String]): (Long, Long) =
     val numbers = input.init.map: line =>
       line.split(" ").filterNot(_.isBlank).map(_.toLong).toSeq
     val operations = input.last.split(" ").filterNot(_.isBlank).toSeq
@@ -46,4 +46,3 @@ object Day6 extends SolutionBaseSimple:
     val grandTotal2 = individualResults2.sum
 
     (grandTotal, grandTotal2)
-  }
